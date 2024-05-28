@@ -32,9 +32,6 @@ import Cards from './Cards.vue';
 <template>
     <div class="main_container relative">
         <div class="cards_container">
-            <div class="found_container">
-                <p>Found X cards</p>
-            </div>
             <div class="card_box">
                 <Cards v-for="card, index in store.cards"  :singleCard="card" :singleCardIndex="index"/>
             </div>
@@ -78,13 +75,6 @@ import Cards from './Cards.vue';
         flex-wrap: wrap;
         gap: 1rem;
         text-align: center;
-    }
-
-    .absolute_selection_box{
-        position: absolute;
-        top:1%;
-        left: 15%;
-        color: white;
     }
     
 </style>
