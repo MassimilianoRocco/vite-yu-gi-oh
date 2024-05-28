@@ -43,14 +43,13 @@ import Cards from './Cards.vue';
                 <p>Found X cards</p>
             </div>
             <div class="card_box">
-                <Cards v-if="archTypeList" v-for="card, index in store.cards"  :singleCard="card" :singleCardIndex="index"/>
-                <div v-else class="user_card">No archetype found for: {{archetype}}</div>
+                <Cards v-for="card, index in store.cards"  :singleCard="card" :singleCardIndex="index"/>
             </div>
         </div>
         <div class="absolute_selection_box">
             <label for="cars">Choose an archetype</label><br>
             <select v-model="archetype" name="cars" id="cars">
-                <option v-for="arch in store.cards" value="archSelection">{{ arch.archetype }}</option>
+                <option v-for="arch in store.archetypeList" value="archSelection">{{ arch.archetype_name }}</option>
             </select>
         </div>
     </div>

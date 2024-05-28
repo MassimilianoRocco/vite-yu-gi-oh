@@ -26,8 +26,8 @@
 <template>
         <div class="card">
             <img :src="singleCard.card_images[0].image_url">
-            <p>{{singleCard.name}}</p>
-            <p>{{ singleCard.archetype }}</p>
+            <p>{{singleCard.name ?  singleCard.name : 'No Name'}}</p>
+            <p>{{ singleCard.archetype ? singleCard.archetype : "Nessun archetipo"  }}</p>
         </div>
 </template>
 
