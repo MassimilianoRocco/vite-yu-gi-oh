@@ -10,20 +10,13 @@ import Cards from './Cards.vue';
   data() {
     return {
       store,
-      archetype: "",
     }
   },
   methods: {
 
   },
   computed: {
-    // archTypeList(){
-    //         if(this.archetype){
-                
-    //             return this.store.cards.filter((card)=>card.archetype.includes(this.archetype));
-    //         }
-    //         return this.store.cards;
-    //     }
+   
   },
   created() {
    
@@ -46,12 +39,7 @@ import Cards from './Cards.vue';
                 <Cards v-for="card, index in store.cards"  :singleCard="card" :singleCardIndex="index"/>
             </div>
         </div>
-        <div class="absolute_selection_box">
-            <label for="cars">Choose an archetype</label><br>
-            <select v-model="archetype" name="cars" id="cars">
-                <option v-for="arch in store.archetypeList" value="archSelection">{{ arch.archetype_name }}</option>
-            </select>
-        </div>
+        
     </div>
 </template>
 
