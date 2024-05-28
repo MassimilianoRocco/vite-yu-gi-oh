@@ -35,6 +35,7 @@
     .card{
         width: calc(100% / 5 - 1rem);
         background-color: slategrey;
+        color: white;
     }
     .card img{
       width: 100%;
